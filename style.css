@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b117be, #17106c);
+}
+.cube{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY (25deg)
+}
+
+.cube .big span{
+    position: absolute;
+    width: 600px;
+    height: 600;
+    background: var(--clr);
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg *var(--i))) translateZ(299px);
+    transition:.5s;
+}
