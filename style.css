@@ -23,17 +23,120 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--clr);
     transform-style: preserve-3d;
+    animation: anim 30s linear infinite;
     transform: rotateX(-20deg) rotateY (25deg)
+}
+
+@keyframes anim {
+  0%{
+      transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100%{
+      transform: rotateX(-20deg)
+          rotateY(0);
+    }
 }
 
 .cube .big span{
     position: absolute;
     width: 600px;
-    height: 600;
+    height: 600px;
     background: var(--clr);
     transform-style: preserve-3d;
-    transform: rotateY(calc(90deg *var(--i))) translateZ(299px);
+    transform: rotateY(calc(90deg *var(--i))) translateZ(299px);/
     transition:.5s;
 }
+
+.cube .big span{
+    background: transparent;
+    border: 20px solid #d00dff;
+    box-shadow: 0px 0px 25px #9900f8;
+}
+
+.cube .big span.top{
+    transform: rotateX(90deg)
+        translateZ(299px)
+}
+
+.cube .big .bottom{
+    transform: rotateX(90deg)
+    translateZ(-299px)
+}
+
+.cube .big .top::before{
+  content: "" ;
+    position: absolute;
+    inset: 0px;
+    transform: translateZ(-700px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(200px);
+}
+.cube2{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    transform:scale 300px;
+}
+
+.cube2 div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: anim 30s linear infinite;
+    transform: rotateX(-20deg) rotateY (25deg)
+}
+
+@keyframes anim .cube2 {
+  0%{
+      transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100%{
+      transform: rotateX(-20deg)
+          rotateY(0);
+    }
+}
+
+.cube2 .small span{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: var(--clr);
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg *var(--i))) translateZ(299px);/
+    transition:.5s;
+}
+
+.cube2 .small span{
+    background: transparent;
+    border: 20px solid #d00dff;
+    box-shadow: 0px 0px 25px #9900f8;
+}
+
+.cube2 .small span.top{
+    transform: rotateX(90deg)
+        translateZ(299px)
+}
+
+.cube2 .small .bottom{
+    transform: rotateX(90deg)
+    translateZ(-299px)
+}
+
+.cube2 .small .top::before{
+  content: "" ;
+    position: absolute;
+    inset: 0px;
+    transform: translateZ(-700px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(200px);
+}
+
+
+
+
